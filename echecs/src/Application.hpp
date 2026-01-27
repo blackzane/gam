@@ -1,18 +1,18 @@
 #ifndef APPLICATION_HPP
 #define APPLICATION_HPP
 
-#include "Core/Plateau.hpp"
 #include "Interface.hpp"
+#include "Core/Plateau.hpp"
 
 class Application {
-private:
-    bool enCours;
-    Plateau plateau;
-    Interface interfaceJeu;
-
 public:
     Application();
     void executer();
+
+private:
+    Interface interface;
+    Plateau plateau;
+    bool enCours;
 };
 
 #endif

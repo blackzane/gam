@@ -1,17 +1,14 @@
 #include "Application.hpp"
 
-Application::Application()
-{
-    enCours = true;
-    plateau.initialiser();
-    interfaceJeu.initialiser();
-}
+Application::Application() : enCours(true) {}
 
-void Application::executer()
-{
+void Application::executer() {
+    interface.initialiser();
+
     while (enCours) {
-        interfaceJeu.evenements(enCours, plateau);
-        interfaceJeu.dessiner(plateau);
+        interface.evenements(enCours, plateau);
+        interface.dessiner(plateau);
     }
-    interfaceJeu.nettoyer();
+
+    interface.nettoyer();
 }

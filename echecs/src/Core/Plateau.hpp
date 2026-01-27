@@ -1,12 +1,10 @@
-#pragma once
-#include "Piece.hpp"
+#ifndef PLATEAU_HPP
+#define PLATEAU_HPP
 
 class Plateau {
-private:
-    Piece grille[8][8];
-
 public:
-    void initialiser();
-    Piece obtenir(int x, int y) const;
+    Plateau();
     void deplacer(int x1, int y1, int x2, int y2);
 };
+
+#endif
