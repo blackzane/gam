@@ -28,7 +28,7 @@ void Interface::initialiser()
     textures["blanc_pion"] = charger(rendu, "assets/pieces/blanc_pion.png");
     textures["noir_pion"]  = charger(rendu, "assets/pieces/noir_pion.png");
 
-    son = Mix_LoadWAV("assets/sons/clic.wav");
+    son = Mix_LoadWAV("assets/sons/clic.ogg");
     selection = false;
 }
 
