@@ -1,14 +1,14 @@
-#ifndef APP_HPP
-#define APP_HPP
+#ifndef APPLICATION_HPP
+#define APPLICATION_HPP
 
 #include "Core/Plateau.hpp"
-#include "GUI.hpp"
+#include "Interface.hpp"
 
 class Application {
 private:
+    bool enCours;
     Plateau plateau;
-    InterfaceGraphique interfaceGraphique;
-    bool applicationEnCours;
+    Interface interfaceJeu;
 
 public:
     Application();

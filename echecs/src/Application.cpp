@@ -1,18 +1,17 @@
-#include "App.hpp"
+#include "Application.hpp"
 
 Application::Application()
-    : applicationEnCours(true)
 {
-    plateau.reinitialiser();
-    interfaceGraphique.initialiser();
+    enCours = true;
+    plateau.initialiser();
+    interfaceJeu.initialiser();
 }
 
 void Application::executer()
 {
-    while (applicationEnCours) {
-        interfaceGraphique.gererEvenements(applicationEnCours, plateau);
-        interfaceGraphique.dessiner(plateau);
+    while (enCours) {
+        interfaceJeu.evenements(enCours, plateau);
+        interfaceJeu.dessiner(plateau);
     }
-
-    interfaceGraphique.nettoyer();
+    interfaceJeu.nettoyer();
 }
